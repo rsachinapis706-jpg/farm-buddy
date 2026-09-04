@@ -1,0 +1,51 @@
+name: farm_buddy
+description: "Farm Buddy — The right decision. At the right time. A farmer-first decision app for Indian agriculture (Smart India Hackathon 2026)."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+
+  # State management
+  flutter_riverpod: ^2.5.1
+
+  # Navigation
+  go_router: ^14.0.0
+
+  # Formatting (currency, dates)
+  intl: ^0.19.0
+
+  # Camera / gallery for the crop photo step.
+  # Android: works out of the box. iOS: add NSCameraUsageDescription +
+  # NSPhotoLibraryUsageDescription to Info.plist (see SETUP.md).
+  image_picker: ^1.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Farm Buddy ships ZERO raster assets on purpose. Every illustration, the
+  # logo, the map and the charts are drawn with CustomPainter, so the app is
+  # small, sharp at any density, and can never fail with a missing-asset error.
+  #
+  # The two fonts below are the one deliberate exception. Android and iOS carry
+  # system Tamil and Devanagari faces, but Flutter's web renderer (CanvasKit)
+  # bundles only Latin glyphs and cannot borrow the browser's fonts — so on the
+  # web every Tamil and Hindi string rendered as empty boxes until these were
+  # bundled. For a trilingual app that is a correctness bug, not a nicety.
+  fonts:
+    - family: NotoSansTamil
+      fonts:
+        - asset: assets/fonts/NotoSansTamil.ttf
+    - family: NotoSansDevanagari
+      fonts:
+        - asset: assets/fonts/NotoSansDevanagari.ttf

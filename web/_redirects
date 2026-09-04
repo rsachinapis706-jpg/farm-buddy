@@ -1,0 +1,10 @@
+# Netlify: serve the Flutter app for any unmatched path.
+#
+# The app currently uses hash routing (/#/markets), so this is not strictly
+# required today. It is here so that switching to path URLs later — by calling
+# usePathUrlStrategy() in main.dart — does not silently start 404ing on
+# refresh, which is the classic single-page-app deploy bug.
+#
+# Anything in web/ is copied into build/web by `flutter build web`, so this
+# travels with every build.
+/*  /index.html  200

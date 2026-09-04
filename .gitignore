@@ -1,0 +1,18 @@
+.DS_Store
+.dart_tool/
+.packages
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+*.iml
+.idea/
+.vscode/
+
+# pubspec.lock IS committed. This is an application, not a package — pinning
+# the resolved versions is what makes every teammate's build identical to the
+# one that was demoed.
+
+# Local Netlify folder
+.netlify
