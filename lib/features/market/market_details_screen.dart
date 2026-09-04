@@ -24,7 +24,7 @@ import 'package:farm_buddy/widgets/cards/why_card.dart';
 import 'package:farm_buddy/widgets/common/app_header.dart';
 import 'package:farm_buddy/widgets/common/demo_data_chip.dart';
 import 'package:farm_buddy/widgets/common/freshness_chip.dart';
-import 'package:farm_buddy/widgets/common/map_preview.dart';
+import 'package:farm_buddy/widgets/common/fb_map.dart';
 import 'package:farm_buddy/widgets/common/price_trend_chart.dart';
 import 'package:farm_buddy/widgets/common/status_badge.dart';
 import 'package:farm_buddy/widgets/states/error_state.dart';
@@ -250,12 +250,15 @@ class _Details extends ConsumerWidget {
               ),
 
               const SizedBox(height: AppSpacing.md),
-              MapPreview(
+              FbMap(
                 height: 160,
                 showRoute: true,
                 centerLabel: market.name,
-                markers: <MapMarker>[
-                  MapMarker(
+                markers: <FbMapMarker>[
+                  FbMapMarker(
+                    id: market.id,
+                    latitude: market.latitude,
+                    longitude: market.longitude,
                     x: market.mapX,
                     y: market.mapY,
                     label: market.name.split(',').first,

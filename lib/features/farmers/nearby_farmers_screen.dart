@@ -17,7 +17,7 @@ import 'package:farm_buddy/widgets/cards/farmer_card.dart';
 import 'package:farm_buddy/widgets/common/app_header.dart';
 import 'package:farm_buddy/widgets/common/demo_data_chip.dart';
 import 'package:farm_buddy/widgets/common/emoji_text.dart';
-import 'package:farm_buddy/widgets/common/map_preview.dart';
+import 'package:farm_buddy/widgets/common/fb_map.dart';
 import 'package:farm_buddy/widgets/common/offline_banner.dart';
 import 'package:farm_buddy/widgets/states/empty_state.dart';
 import 'package:farm_buddy/widgets/states/error_state.dart';
@@ -88,15 +88,18 @@ class NearbyFarmersScreen extends ConsumerWidget {
                     const OfflineBanner(),
 
                     // ------------------------------------------- map
-                    MapPreview(
+                    FbMap(
                       height: 170,
                       showRoute: false,
-                      markers: <MapMarker>[
+                      markers: <FbMapMarker>[
                         for (int i = 0;
                             i < (farmers.value?.length ?? 0) &&
                                 i < _pinSpots.length;
                             i++)
-                          MapMarker(
+                          FbMapMarker(
+                            id: farmers.value![i].id,
+                            latitude: farmers.value![i].latitude,
+                            longitude: farmers.value![i].longitude,
                             x: _pinSpots[i].dx,
                             y: _pinSpots[i].dy,
                             label: farmers.value![i].name.split(' ').first,

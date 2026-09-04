@@ -12,6 +12,7 @@ import 'package:farm_buddy/features/home/home_screen.dart';
 import 'package:farm_buddy/features/market/best_market_screen.dart';
 import 'package:farm_buddy/features/market/market_details_screen.dart';
 import 'package:farm_buddy/features/onboarding/onboarding_screen.dart';
+import 'package:farm_buddy/features/profile/location_settings_screen.dart';
 import 'package:farm_buddy/features/profile/profile_screen.dart';
 import 'package:farm_buddy/features/shell/main_shell.dart';
 import 'package:farm_buddy/features/splash/splash_screen.dart';
@@ -36,6 +37,7 @@ abstract final class AppRoutes {
   static const String cropHealth = '/crop-health';
   static const String marketDetails = '/market-details';
   static const String groupSale = '/group-sale';
+  static const String locationSettings = '/location-settings';
 }
 
 final GlobalKey<NavigatorState> _rootNavigatorKey =
@@ -76,6 +78,11 @@ final goRouterProvider = Provider<GoRouter>((ref) {
         path: AppRoutes.groupSale,
         builder: (BuildContext context, GoRouterState state) =>
             const GroupSaleScreen(),
+      ),
+      GoRoute(
+        path: AppRoutes.locationSettings,
+        builder: (BuildContext context, GoRouterState state) =>
+            const LocationSettingsScreen(),
       ),
       GoRoute(
         path: '${AppRoutes.marketDetails}/:id',

@@ -9,6 +9,8 @@ class NearbyFarmer {
     required this.cropEmoji,
     required this.quantityKg,
     required this.avatarSeed,
+    required this.latitude,
+    required this.longitude,
     required this.tagKeys,
     this.isConnected = false,
     required this.rating,
@@ -26,6 +28,10 @@ class NearbyFarmer {
   /// Drives the generated avatar colour + initials block. No photos, no
   /// uploads, no privacy problem.
   final int avatarSeed;
+
+  /// Approximate village coordinates, so the live map can place them.
+  final double latitude;
+  final double longitude;
 
   /// Localisation keys: 'tag.sameCrop', 'tag.seeds', 'tag.rotation', ...
   final List<String> tagKeys;
@@ -56,6 +62,8 @@ class NearbyFarmer {
       cropEmoji: cropEmoji,
       quantityKg: quantityKg,
       avatarSeed: avatarSeed,
+      latitude: latitude,
+      longitude: longitude,
       tagKeys: tagKeys,
       isConnected: isConnected ?? this.isConnected,
       rating: rating,

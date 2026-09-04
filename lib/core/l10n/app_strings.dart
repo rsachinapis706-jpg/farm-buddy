@@ -429,6 +429,33 @@ class AppStrings {
     'profile.aboutBody':
         'Farm Buddy helps a farmer decide where and when to sell. Demo build for Smart India Hackathon 2026.',
     'profile.helpBody': 'Call the helpline or ask your local agriculture officer.',
+
+    // ---- location & maps
+    'profile.location': 'Location & maps',
+    'loc.title': 'Location & maps',
+    'loc.subtitle': 'Where the app thinks you are',
+    'loc.current': 'Current location',
+    'loc.use': 'Use my current location',
+    'loc.detecting': 'Finding you…',
+    'loc.source.device': 'From your phone',
+    'loc.source.manual': 'You chose this',
+    'loc.source.guess': 'Default guess',
+    'loc.accuracy': 'Accurate to about {n} m',
+    'loc.permission.title': 'Location permission',
+    'loc.permission.denied': 'Not allowed yet. Tap the button above to ask again.',
+    'loc.permission.forever': 'Blocked. You will need to allow it in phone settings.',
+    'loc.permission.off': 'Location is switched off on this phone.',
+    'loc.permission.unsupported': 'This device cannot report a location.',
+    'loc.openSettings': 'Open settings',
+    'loc.why':
+        'Your location is used to work out how far each market is. In this build it stays on your phone.',
+    'loc.liveMap': 'Live Google map',
+    'loc.liveMapBody':
+        'Use the real map instead of the drawn one. Needs an API key and a signal.',
+    'loc.pick': 'Or pick a place',
+    'loc.reset': 'Reset to default',
+    'loc.failed': 'Could not get your location. Showing the default.',
+    'loc.updated': 'Location updated',
   };
 
   // ============================================================= TAMIL ====
@@ -780,6 +807,32 @@ class AppStrings {
     'profile.aboutBody':
         'எங்கே, எப்போது விற்பது என்பதை முடிவு செய்ய ஃபார்ம் பட்டி உதவுகிறது. SIH 2026 மாதிரி பதிப்பு.',
     'profile.helpBody': 'உதவி எண்ணை அழைக்கவும் அல்லது வேளாண் அலுவலரிடம் கேளுங்கள்.',
+
+    'profile.location': 'இடம் & வரைபடம்',
+    'loc.title': 'இடம் & வரைபடம்',
+    'loc.subtitle': 'நீங்கள் எங்கே இருக்கிறீர்கள்',
+    'loc.current': 'தற்போதைய இடம்',
+    'loc.use': 'என் இடத்தை பயன்படுத்து',
+    'loc.detecting': 'கண்டறிகிறோம்…',
+    'loc.source.device': 'உங்கள் கைபேசியில் இருந்து',
+    'loc.source.manual': 'நீங்கள் தேர்ந்தது',
+    'loc.source.guess': 'இயல்பு மதிப்பீடு',
+    'loc.accuracy': 'சுமார் {n} மீ துல்லியம்',
+    'loc.permission.title': 'இட அனுமதி',
+    'loc.permission.denied': 'இன்னும் அனுமதி இல்லை. மேலே உள்ள பொத்தானை அழுத்துங்கள்.',
+    'loc.permission.forever': 'தடுக்கப்பட்டது. கைபேசி அமைப்புகளில் அனுமதிக்க வேண்டும்.',
+    'loc.permission.off': 'இந்த கைபேசியில் இட சேவை அணைக்கப்பட்டுள்ளது.',
+    'loc.permission.unsupported': 'இந்த சாதனத்தில் இடத்தை அறிய முடியாது.',
+    'loc.openSettings': 'அமைப்புகளை திற',
+    'loc.why':
+        'ஒவ்வொரு சந்தையும் எவ்வளவு தூரம் என்பதை கணக்கிட உங்கள் இடம் பயன்படுகிறது. இது உங்கள் கைபேசியிலேயே இருக்கும்.',
+    'loc.liveMap': 'நேரடி Google வரைபடம்',
+    'loc.liveMapBody':
+        'வரையப்பட்ட வரைபடத்திற்கு பதிலாக உண்மையான வரைபடம். API சாவியும் இணையமும் தேவை.',
+    'loc.pick': 'அல்லது ஒரு இடத்தை தேர்வு செய்',
+    'loc.reset': 'இயல்புக்கு மீட்டமை',
+    'loc.failed': 'இடத்தை பெற முடியவில்லை. இயல்பு காட்டப்படுகிறது.',
+    'loc.updated': 'இடம் புதுப்பிக்கப்பட்டது',
   };
 
   // ============================================================= HINDI ====
@@ -1126,5 +1179,31 @@ class AppStrings {
     'profile.aboutBody':
         'कहाँ और कब बेचना है, यह तय करने में फ़ार्म बडी मदद करता है। SIH 2026 डेमो।',
     'profile.helpBody': 'हेल्पलाइन पर कॉल करें या स्थानीय कृषि अधिकारी से पूछें।',
+
+    'profile.location': 'जगह और नक्शा',
+    'loc.title': 'जगह और नक्शा',
+    'loc.subtitle': 'ऐप के हिसाब से आप कहाँ हैं',
+    'loc.current': 'मौजूदा जगह',
+    'loc.use': 'मेरी जगह इस्तेमाल करें',
+    'loc.detecting': 'पता कर रहे हैं…',
+    'loc.source.device': 'आपके फ़ोन से',
+    'loc.source.manual': 'आपने चुना',
+    'loc.source.guess': 'डिफ़ॉल्ट अनुमान',
+    'loc.accuracy': 'लगभग {n} मी सटीक',
+    'loc.permission.title': 'जगह की अनुमति',
+    'loc.permission.denied': 'अभी अनुमति नहीं है। ऊपर वाला बटन दबाएँ।',
+    'loc.permission.forever': 'रोक दी गई है। फ़ोन सेटिंग में अनुमति देनी होगी।',
+    'loc.permission.off': 'इस फ़ोन में लोकेशन बंद है।',
+    'loc.permission.unsupported': 'यह डिवाइस जगह नहीं बता सकता।',
+    'loc.openSettings': 'सेटिंग खोलें',
+    'loc.why':
+        'हर मंडी कितनी दूर है, यह निकालने के लिए आपकी जगह इस्तेमाल होती है। इस बिल्ड में यह फ़ोन पर ही रहती है।',
+    'loc.liveMap': 'लाइव Google नक्शा',
+    'loc.liveMapBody':
+        'बनाए हुए नक्शे की जगह असली नक्शा। API की और नेटवर्क चाहिए।',
+    'loc.pick': 'या कोई जगह चुनें',
+    'loc.reset': 'डिफ़ॉल्ट पर लौटें',
+    'loc.failed': 'जगह नहीं मिली। डिफ़ॉल्ट दिखा रहे हैं।',
+    'loc.updated': 'जगह अपडेट हुई',
   };
 }

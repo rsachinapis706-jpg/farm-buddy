@@ -22,7 +22,7 @@ import 'package:farm_buddy/widgets/cards/why_card.dart';
 import 'package:farm_buddy/widgets/common/app_header.dart';
 import 'package:farm_buddy/widgets/common/demo_data_chip.dart';
 import 'package:farm_buddy/widgets/common/freshness_chip.dart';
-import 'package:farm_buddy/widgets/common/map_preview.dart';
+import 'package:farm_buddy/widgets/common/fb_map.dart';
 import 'package:farm_buddy/widgets/common/offline_banner.dart';
 import 'package:farm_buddy/widgets/states/empty_state.dart';
 import 'package:farm_buddy/widgets/states/error_state.dart';
@@ -157,9 +157,12 @@ class _MarketList extends ConsumerWidget {
     final bool isRecommendation = sort == MarketSort.bestValue;
     final Market best = markets.first;
 
-    final List<MapMarker> pins = <MapMarker>[
+    final List<FbMapMarker> pins = <FbMapMarker>[
       for (int i = 0; i < markets.length && i < 4; i++)
-        MapMarker(
+        FbMapMarker(
+          id: markets[i].id,
+          latitude: markets[i].latitude,
+          longitude: markets[i].longitude,
           x: markets[i].mapX,
           y: markets[i].mapY,
           label: markets[i].name.split(',').first,
@@ -174,7 +177,7 @@ class _MarketList extends ConsumerWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          MapPreview(
+          FbMap(
             height: 190,
             markers: pins,
             showRoute: true,

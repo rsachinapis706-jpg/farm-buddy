@@ -13,6 +13,7 @@ import 'package:farm_buddy/features/profile/widgets/records_sheets.dart';
 import 'package:farm_buddy/models/activity.dart';
 import 'package:farm_buddy/models/enums.dart';
 import 'package:farm_buddy/providers/activity_providers.dart';
+import 'package:farm_buddy/providers/location_providers.dart';
 import 'package:farm_buddy/models/user_profile.dart';
 import 'package:farm_buddy/providers/app_providers.dart';
 import 'package:farm_buddy/providers/market_providers.dart';
@@ -285,6 +286,12 @@ class ProfileScreen extends ConsumerWidget {
                         label: s('profile.language'),
                         trailing: language.nativeName,
                         onTap: () => showLanguageSheet(context),
+                      ),
+                      _MenuTile(
+                        icon: Icons.place_outlined,
+                        label: s('profile.location'),
+                        trailing: ref.watch(locationLabelProvider),
+                        onTap: () => context.push(AppRoutes.locationSettings),
                       ),
                       // Offline demo: lets a judge see the cached-data
                       // behaviour without turning off mobile data.

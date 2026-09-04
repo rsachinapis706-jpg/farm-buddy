@@ -19,6 +19,8 @@ class Market {
     required this.reasonKeys,
     required this.mapX,
     required this.mapY,
+    required this.latitude,
+    required this.longitude,
     required this.updatedAt,
   });
 
@@ -51,9 +53,15 @@ class Market {
   /// Localisation keys explaining *why* this market is recommended.
   final List<String> reasonKeys;
 
-  /// Normalised 0..1 position on the drawn map.
+  /// Normalised 0..1 position on the drawn map. Used only by [MapPreview],
+  /// which has no concept of real geography.
   final double mapX;
   final double mapY;
+
+  /// Real coordinates, used by the live Google map and to compute distance
+  /// from wherever the farmer actually is.
+  final double latitude;
+  final double longitude;
 
   final DateTime updatedAt;
 
